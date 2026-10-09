@@ -95,3 +95,96 @@ button {
     background-color: #fff8f0;
     color: #211d1b;
 }
+
+.how-it-works {
+    max-width: 900px;
+    width: 85%;
+    margin: 70px auto;
+    color: #211d1b;
+}
+
+.how-it-works h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.step {
+    background-color: #fff8f0;
+    border: 2px solid #211d1b;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.step-number {
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+.step h3 {
+    font-size: 24px;
+    margin: 8px 0 12px;
+}
+
+.step p {
+    margin: 6px 0;
+    line-height: 1.6;
+}
+
+.step a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.step .aside {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.shop {
+    max-width: 1000px;
+    width: 85%;
+    margin: 80px auto;
+    color: #211d1b;
+}
+
+.shop h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.shop-subtitle {
+    margin-bottom: 28px;
+}
+
+.shop-item {
+    position: relative;
+    padding: 22px;
+    background-color: #fff8f0;
+    border: 2px solid #211d1b;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.item-number {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.item-image {
+    font-size: 48px;
+    margin: 12px 0;
+}
+
+.shop-item h3 {
+    font-size: 19px;
+    margin: 10px 0;
+}
