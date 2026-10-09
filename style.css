@@ -13,7 +13,11 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 body {
@@ -36,7 +40,7 @@ button {
 
 .topbar {
     width: 100%;
-    padding: 25p 35px;
+    padding: 25px 35px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -45,38 +49,49 @@ button {
 
 .pawgrammed {
     font-family: "Paw", sans-serif;
-    font-size: clamp(55px, 10vw, 145px);
+    font-size: clamp(40px, 7vw, 100px);
     line-height: 1;
-    letter-spacing: -5px;
+    letter-spacing: 3px;
     color: #211d1b;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
     white-space: nowrap;
+    width: 100%;
+    margin: 0;
 }
 
-.top-right {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin-top: 10px;
-    font-size: 16px;
-}
+.submit-box {
+    max-width: 600px;
+    width: 85%;
+    margin: 40px auto;
+    padding: 35px;
 
-.top-right a {
-    color: #211d1b;
-    text-decoration: none;
-    padding: 10px 18px;
+    background-color: #fff8f0;
     border: 2px solid #211d1b;
-    transition: 0.2s;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
 }
 
-.top-right a:hover {
-    background: #ff6b9d;
-    transform: rotate(-3deg);
+.submit-box p {
+    margin: 0;
+    line-height: 1.6;
 }
 
-.topbar {
-    position: relative;
+.submit-button {
+    padding: 12px 30px;
+    background-color: #211d1b;
+    color: #fff8f0;
+    border: 2px solid #211d1b;
+    border-radius: 10px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #fff8f0;
+    color: #211d1b;
 }
