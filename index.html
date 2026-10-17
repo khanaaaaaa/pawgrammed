@@ -4,55 +4,144 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PAWGRAMMED</title>
+        <link rel="icon" type="image/png" href="images/paw-prize.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body class="intro-active">
+        <div class="intro-overlay" id="introOverlay">
+            <div class="intro-paw-container">
+                <img src="images/paw-print-inverted.png" alt="Paw print" class="intro-paw" id="introPaw">
+            </div>
+            <div class="intro-hint" id="introHint">scroll to enter</div>
+            <div class="intro-flash" id="introFlash"></div>
+        </div>
         <header class="topbar">
-            <a href="#" class="pawgrammed">PAWGRAMMED</a>
+            <div class="hero-brand">
+                <a href="#" class="pawgrammed">PAWGRAMMED</a>
+                <p class="hero-subtext">
+                    Ship furry related projects.<br>
+                    Get furry related prizes.
+                </p>
+                <form class="hero-auth-form" action="/login" method="GET">
+                    <input type="email" name="email" class="hero-email-input" placeholder="you@example.com" autocomplete="email" required>
+                    <button type="submit" class="hero-start-btn">Start &rarr;</button>
+                </form>
+                <p class="hero-credits">Made with <img src="images/black-heart-icon.png" alt="heart" class="heart-icon"> by <strong>agm</strong> and <strong>ilovepasta</strong> for <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer">Hack Club</a></p>
+            </div>
+            <a href="/login" class="nav-login">
+                <span class="nav-login-btn">Login with Hack Club</span>
+                <svg class="nav-login-tail" viewBox="0 -8 215 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="navTailPath" d="M 14.0,0.0 C 14.7,3.0 14.5,12.2 18.0,18.0 C 21.5,23.8 27.7,30.5 35.0,35.0 C 42.3,39.5 52.0,44.7 62.0,45.0 C 72.0,45.3 84.0,39.7 95.0,37.0 C 106.0,34.3 117.2,29.7 128.0,29.0 C 138.8,28.3 150.3,31.2 160.0,33.0 C 169.7,34.8 181.7,38.8 186.0,40.0" stroke="#211d1b" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
         </header>
-        <section class="hero">
-            <div class="submit-box">
-                <p>Code a project related to furries using any tools you like, and get cool prizes!</p>
-            <button class="submit-button">SUBMIT PROJECT</button>
+        <section class="how-it-works" id="howItWorks">
+            <div class="pathway-header">
+                <h2>How does this work?</h2>
+            </div>
+            <div class="pathway-wrap">
+                <svg class="pathway-svg" id="pathwaySvg" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <g id="pawPrintDef">
+                            <image href="images/paw-print-icon.png" width="22" height="22" x="-11" y="-11"></image>
+                        </g>
+                    </defs>
+                    <path class="pathway-trail" id="pathwayTrail" d="" fill="none" />
+                    <g class="pathway-paws" id="pathwayPaws"></g>
+                </svg>
+
+                <div class="pathway-steps">
+                    <div class="pathway-stop stop-text-left" data-step="1">
+                        <div class="stop-side stop-text-side">
+                            <div class="stop-card">
+                                <h3>Join the pack</h3>
+                                <p>Join us on <a href="https://hackclub.enterprise.slack.com/archives/C0C5HMQE9RD" target="_blank" rel="noopener noreferrer">Slack</a> and meet the others</p>
+                                <p class="stop-aside">come yap, lurk or sit in the corner!</p>
+                            </div>
+                        </div>
+                        <div class="stop-node">
+                            <span class="node-circle">01</span>
+                        </div>
+                        <div class="stop-side stop-media-side">
+                            <img src="images/rex_main_front.png" alt="Rex mascot" class="rex-mascot rex-front">
+                        </div>
+                    </div>
+
+                    <div class="pathway-stop stop-text-right" data-step="2">
+                        <div class="stop-side stop-media-side">
+                            <img src="images/rex-studious.png" alt="Rex studious" class="rex-mascot rex-studious">
+                        </div>
+                        <div class="stop-node">
+                            <span class="node-circle">02</span>
+                        </div>
+                        <div class="stop-side stop-text-side">
+                            <div class="stop-card">
+                                <h3>Make stuff</h3>
+                                <p>Build a game, website, tool, or whatever your brain comes up with.</p>
+                                <p class="stop-aside">gotta be furry-related.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pathway-stop stop-text-left" data-step="3">
+                        <div class="stop-side stop-text-side">
+                            <div class="stop-card">
+                                <h3>Track your hours</h3>
+                                <p>Turn on Hackatime before you start coding.</p>
+                                <p class="stop-aside">staring at your code for 3 hours wondering why it's broken is unfortunately just part of the experience.</p>
+                            </div>
+                        </div>
+                        <div class="stop-node">
+                            <span class="node-circle">03</span>
+                        </div>
+                        <div class="stop-side stop-media-side">
+                            <img src="images/clock.png" alt="Hackatime clock" class="step-clock-img">
+                        </div>
+                    </div>
+
+                    <div class="pathway-stop stop-text-right" data-step="4">
+                        <div class="stop-side stop-media-side">
+                            <img src="images/rex-tired.png" alt="Rex tired" class="rex-mascot rex-tired">
+                        </div>
+                        <div class="stop-node">
+                            <span class="node-circle">04</span>
+                        </div>
+                        <div class="stop-side stop-text-side">
+                            <div class="stop-card">
+                                <h3>Drop the build</h3>
+                                <p>Show us what you've been cooking!</p>
+                                <p class="stop-aside">we don't like gatekeepers!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pathway-stop stop-text-left" data-step="5">
+                        <div class="stop-side stop-text-side">
+                            <div class="stop-card">
+                                <h3>Claim the goods</h3>
+                                <p>Trade your hard-earned hours for prizes.</p>
+                                <p class="stop-aside">the fursuit is NOT gonna fund itself.</p>
+                            </div>
+                        </div>
+                        <div class="stop-node">
+                            <span class="node-circle">05</span>
+                        </div>
+                        <div class="stop-side stop-media-side">
+                            <img src="images/prizes-thingy.png" alt="Prizes" class="prizes-img">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pathway-footer">
+                    <a href="/login" class="pathway-submit-btn">Submit Project &rarr;</a>
+                </div>
             </div>
         </section>
-        <section class="how-it-works">
-            <h2>how it works</h2>
-            <div class="steps">
-                <div class="step">
-                    <span class="step-number">01</span>
-                    <h3>join the pack</h3>
-                    <p>Join us on <a href="https://hackclub.enterprise.slack.com/archives/C0C5HMQE9RD">Slack</a> and meet the others</p>
-                    <p class="aside">come yap, lurk or sit in the corner!</p>
-                </div>
-                <div class="step">
-                    <span class="step-number">02</span>
-                    <h3>Make stuff</h3>
-                    <p>Build a game, website, tool, or whatever your brain comes up with.</p>
-                    <p class="aside">gotta be furry-related.</p>
-                </div>
-                <div class="step">
-                    <span class="step-number">03</span>
-                    <h3>Track your hours</h3>
-                    <p>Turn on Hackatime before you start coding.</p>
-                    <p class="aside">staring at your code for 3 hours wondering why it's broken is unfortunately just part of the experience.</p>
-                </div>
-                <div class="step">
-                    <span class="step-number">04</span>
-                    <h3>Drop the build</h3>
-                    <p>Show us what you've been cooking!</p>
-                    <p class="aside">we don't like gatekeepers!</p>
-                </div>
-                <div class="step">
-                    <span class="step-number">05</span>
-                    <h3>Claim the goods</h3>
-                    <p>Trade your hard-earned hours for prizes.</p>
-                    <p class="aside">the fursuit is NOT gonna fund itself.</p>
-                </div>
-            </div>
-        </section>
-        <section class="shop">
-            <h2>rewards</h2>
+        <section class="shop" id="shop">
+            <h2>Rewards</h2>
             <p class="shop-subtitle">you made stuff, now get the goods.</p>
             <div class="shop-items">
                 <div class="shop-item">
@@ -89,37 +178,82 @@
                 </div>
             </div>
         </section>
-        <section class="faq">
-            <h2>faq</h2>
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Is this free?</span>
-                    <span class="faq-arrow">↓</span>
-                </button>
-                <div class="faq-answer">Yep! No entry fee, all we require is you and your questionable amount of free time.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>What can I ship?</span>
-                    <span class="faq-arrow">↓</span>
-                </button>
-                <div class="faq-answer">Anything related to the furries! If your fellow furs mess with it, ship it!</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Am I eligible?</span>
-                    <span class="faq-arrow">↓</span>
-                </button>
-                <div class="faq-answer">If you're 13-18, you're in!</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Do I need Hackatime?</span>
-                    <span class="faq-arrow">↓</span>
-                </button>
-                <div class="faq-answer">Non-negotiable! It tracks the amount of time you spent on your project, without it we can't give yu any prizes.</div>
+        <section class="faq-section">
+            <div class="faq">
+                <h2>FAQ</h2>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is this free?</span>
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-answer">Yep! No entry fee, all we require is you and your questionable amount of free time.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What can I ship?</span>
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-answer">Anything related to the furries! If your fellow furs mess with it, ship it!</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Am I eligible?</span>
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-answer">If you're 13-18, you're in!</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do I need Hackatime?</span>
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-answer">Non-negotiable! It tracks the amount of time you spent on your project, without it we can't give you any prizes.</div>
+                </div>
             </div>
         </section>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">PAWGRAMMED</a>
+                    <p class="footer-desc">
+                        Hack Club is a 501(c)(3) nonprofit and network of 100k+ technical high schoolers. We believe you learn best by building, so we're creating community and providing grants so you can make awesome projects. In the past few years, we've <a href="https://www.youtube.com/watch?v=ufMUJ9D1fi8" target="_blank" rel="noopener noreferrer">sent 30 teen hackers hiking the Pacific Crest Trail</a>, <a href="https://www.youtube.com/watch?v=8iM1W8kXrQA" target="_blank" rel="noopener noreferrer">hosted a hackathon for the worst ideas</a>, and <a href="https://www.youtube.com/watch?v=kaEFv7e49mo" target="_blank" rel="noopener noreferrer">ran the largest hardware hackathon at GitHub HQ</a>.
+                    </p>
+                    <p class="footer-desc">
+                        Read about Hack Club in <a href="https://www.wsj.com/articles/teen-hackers-try-to-convince-parents-they-are-up-to-good-11569922200" target="_blank" rel="noopener noreferrer">The Wall Street Journal</a>, <a href="https://www.cbsnews.com/sanfrancisco/news/hack-club-hosts-teen-coders-san-francisco/" target="_blank" rel="noopener noreferrer">CBS News</a>, and <a href="https://www.nasa.gov/learning-resources/space-out-this-summer-with-variety-of-nasa-stem-activities/" target="_blank" rel="noopener noreferrer">NASA.gov</a>, or watch us <a href="https://www.youtube.com/live/UbfAhFxDomE?t=7033" target="_blank" rel="noopener noreferrer">on stage with AMD CEO Lisa Su at CES</a>.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">PAWGRAMMED</h4>
+                    <ul class="footer-col-list">
+                        <li><a href="#howItWorks">How it works</a></li>
+                        <li><a href="#shop">The shop</a></li>
+                        <li><a href="https://hackclub.enterprise.slack.com/archives/C0C5HMQE9RD" target="_blank" rel="noopener noreferrer">Explore projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">HACK CLUB</h4>
+                    <ul class="footer-col-list">
+                        <li><a href="https://hackclub.com/philosophy/" target="_blank" rel="noopener noreferrer">Philosophy</a></li>
+                        <li><a href="https://hackclub.com/team/" target="_blank" rel="noopener noreferrer">Team</a></li>
+                        <li><a href="https://hackclub.com/donate/" target="_blank" rel="noopener noreferrer">Donate</a></li>
+                        <li><a href="https://hackclub.com/brand/" target="_blank" rel="noopener noreferrer">Branding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">HELP</h4>
+                    <ul class="footer-col-list">
+                        <li><a href="https://hackclub.enterprise.slack.com/archives/C0C5HMQE9RD" target="_blank" rel="noopener noreferrer">#pawgrammed on Slack</a></li>
+                        <li><a href="https://forms.hackclub.com/bounty" target="_blank" rel="noopener noreferrer">Fulfilment bounty</a></li>
+                        <li><a href="https://hackclub.com/conduct/" target="_blank" rel="noopener noreferrer">Code of conduct</a></li>
+                        <li><a href="https://hackclub.com/privacy-and-terms" target="_blank" rel="noopener noreferrer">Privacy &amp; terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
         <script src="faq.js"></script>
+        <script src="intro.js"></script>
+        <script src="tail.js"></script>
+        <script src="pathway.js"></script>
+        <!-- trigger vercel deployment yay! -->
     </body>
 </html>
